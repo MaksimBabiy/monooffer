@@ -893,7 +893,7 @@ section.products {
     gap: 20px; }
     section.products .container .products_block {
       display: grid;
-      grid-template-columns: repeat(5, 1fr);
+      grid-template-columns: repeat(4, 1fr);
       grid-template-rows: auto;
       grid-column-gap: 10px;
       grid-row-gap: 10px; }
@@ -1175,6 +1175,8 @@ section.product_review {
           width: 70px;
           height: 70px;
           border-radius: 50%; }
+        section.product_review .container .product_review-block-form .avatar_label input {
+          display: none; }
         section.product_review .container .product_review-block-form .form_input {
           display: flex;
           flex-direction: column;
@@ -1189,6 +1191,7 @@ section.product_review {
         section.product_review .container .product_review-block-form textarea {
           padding: 10px;
           resize: none;
+          font-size: 14px;
           border-radius: 5px;
           outline: none;
           border: 0;
@@ -1315,15 +1318,6 @@ footer {
 @media screen and (max-width: 1660px) {
   section.composition .container .composition_items {
     justify-content: center; } }
-
-@media screen and (max-width: 1550px) {
-  section.products .container .products_block-arrow.right {
-    top: 0%;
-    right: 40px; }
-  section.products .container .products_block-arrow.left {
-    top: 0%;
-    left: auto;
-    right: 50px; } }
 
 @media screen and (max-width: 1450px) {
   section.products .container .products_block {

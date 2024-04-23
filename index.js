@@ -25,9 +25,7 @@ let main = document.querySelector("main");
 let email_error = document.querySelector(".email_error");
 let order_forms = document.querySelectorAll("form");
 let emailInputs = document.querySelectorAll(".email");
-const slider = document.querySelector(".slider");
-const prevBtn = document.querySelector(".prev");
-const nextBtn = document.querySelector(".next");
+
 modal_order.addEventListener("click", (e) => {
   if (e.target.offsetParent == null) {
     body.classList.remove("overfloy");
@@ -254,36 +252,3 @@ order_forms.forEach(function (form) {
     }
   });
 });
-
-let visiableCount = 5;
-let currentIndex = 0;
-if (window.innerWidth < 1550 && window.innerWidth > 1070) {
-  visiableCount = 4;
-} else if (window.innerWidth < 1070 && window.innerWidth > 800) {
-  visiableCount = 3;
-} else if (window.innerWidth < 800 && window.innerWidth > 450) {
-  visiableCount = 2;
-} else if (window.innerWidth < 450) {
-  visiableCount = 1;
-}
-prevBtn &&
-  prevBtn.addEventListener("click", function () {
-    if (currentIndex > 0) {
-      currentIndex--;
-      updateSlider();
-    }
-  });
-
-nextBtn &&
-  nextBtn.addEventListener("click", function () {
-    if (currentIndex < slider.children.length - visiableCount) {
-      currentIndex++;
-      updateSlider();
-    }
-  });
-
-function updateSlider() {
-  const slideWidth = slider.children[0].offsetWidth;
-  const translateX = -currentIndex * slideWidth;
-  slider.style.transform = `translateX(${translateX}px)`;
-}
