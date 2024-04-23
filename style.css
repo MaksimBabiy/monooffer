@@ -1204,7 +1204,53 @@ section.product_review {
         section.product_review .container .product_review-block-form textarea {
           min-height: 100px; }
 
+section.instruction {
+  background-color: var(--bg);
+  padding: 50px 0;
+  flex: 1; }
+  section.instruction .container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; }
+
+section.avoid {
+  background-color: var(--bg);
+  padding: 50px 0;
+  flex: 1; }
+  section.avoid .container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; }
+
+section.delivery {
+  background-color: var(--bg);
+  padding: 50px 0;
+  flex: 1; }
+  section.delivery .container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; }
+
+section.about {
+  background-color: var(--bg);
+  padding: 50px 0;
+  flex: 1; }
+  section.about .container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; }
+
+section.reviews_page {
+  background-color: var(--bg);
+  padding: 50px 0;
+  flex: 1; }
+  section.reviews_page .container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; }
+
 footer {
+  border-top: 2px solid var(--surface);
   padding-top: 50px;
   background-color: var(--bg); }
   footer .container {
