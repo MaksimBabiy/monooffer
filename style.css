@@ -36,6 +36,32 @@ span {
   max-width: fit-content;
 }
 
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  border: 1px solid #ddd;
+}
+
+th,
+td {
+  text-align: center;
+  padding: 16px;
+}
+
+th:first-child,
+td:first-child {
+  text-align: left;
+}
+
+tr:nth-child(even) {
+  background-color: var(--bg);
+}
+
+tr:nth-child(odd) {
+  background-color: var(--surface);
+}
+
 .rating {
   cursor: pointer;
 }
@@ -135,6 +161,10 @@ main {
 }
 main.active {
   filter: blur(5px);
+}
+
+h2 {
+  font-size: 30px;
 }
 
 #overlay {
@@ -926,30 +956,6 @@ section.compare .container {
   align-items: center;
   gap: 25px;
 }
-section.compare .container table {
-  border-collapse: collapse;
-  border-spacing: 0;
-  width: 100%;
-  border: 1px solid #ddd;
-}
-section.compare .container th,
-section.compare .container td {
-  text-align: center;
-  padding: 16px;
-}
-section.compare .container th:first-child,
-section.compare .container td:first-child {
-  text-align: left;
-}
-section.compare .container tr:nth-child(even) {
-  background-color: var(--bg);
-}
-section.compare .container .fa-check {
-  color: green;
-}
-section.compare .container .fa-remove {
-  color: red;
-}
 
 section.composition {
   background-color: var(--bg);
@@ -1587,6 +1593,10 @@ section.instruction .container {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  align-items: center;
+}
+section.instruction .container h1 {
+  font-size: 36px;
 }
 
 section.avoid {
@@ -1595,9 +1605,13 @@ section.avoid {
   flex: 1;
 }
 section.avoid .container {
+  align-items: center;
   display: flex;
   flex-direction: column;
   gap: 10px;
+}
+section.avoid .container h1 {
+  font-size: 36px;
 }
 
 section.delivery {
@@ -1609,6 +1623,10 @@ section.delivery .container {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  align-items: center;
+}
+section.delivery .container h1 {
+  font-size: 36px;
 }
 
 section.about {
@@ -1620,6 +1638,10 @@ section.about .container {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  align-items: center;
+}
+section.about .container h1 {
+  font-size: 36px;
 }
 
 section.reviews_page {
@@ -1630,7 +1652,11 @@ section.reviews_page {
 section.reviews_page .container {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 10px;
+}
+section.reviews_page .container h1 {
+  font-size: 36px;
 }
 
 footer {
@@ -1653,6 +1679,10 @@ footer .container .footer_top .footer_top-left {
   flex-direction: column;
   gap: 10px;
 }
+footer .container .footer_top .footer_top-left .footer_top-left-socials {
+  display: flex;
+  gap: 10px;
+}
 footer .container .footer_top .footer_top-center {
   display: flex;
   gap: 10px;
@@ -1664,7 +1694,7 @@ footer .container .footer_top .footer_top-center ul {
   gap: 10px;
 }
 footer .container .footer_top .footer_top-center ul li {
-  font-weight: 700;
+  font-weight: 600;
 }
 footer .container .footer_top .footer_top-right {
   display: flex;
