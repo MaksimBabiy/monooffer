@@ -252,3 +252,30 @@ order_forms.forEach(function (form) {
     }
   });
 });
+
+const slider = document.querySelector(".slider");
+const prevBtn = document.querySelector(".prev");
+const nextBtn = document.querySelector(".next");
+let currentIndex = 0;
+let visiableCount = 1;
+
+prevBtn &&
+  prevBtn.addEventListener("click", function () {
+    if (currentIndex > 0) {
+      currentIndex--;
+      updateSlider();
+    }
+  });
+
+nextBtn &&
+  nextBtn.addEventListener("click", function () {
+    if (currentIndex < slider.children.length - visiableCount) {
+      currentIndex++;
+      updateSlider();
+    }
+  });
+function updateSlider() {
+  const slideWidth = slider.children[0].offsetWidth;
+  const translateX = -currentIndex * slideWidth;
+  slider.style.transform = `translateX(${translateX}px)`;
+}
