@@ -36,7 +36,7 @@ modal_order.addEventListener("click", (e) => {
 modalClose.addEventListener("click", () => {
   body.classList.remove("overfloy");
   modal_order.classList.remove("active");
-  main.classList.remove("active");
+  overlay.classList.remove("active");
 });
 for (let item of faq_item) {
   item.addEventListener("click", function () {
