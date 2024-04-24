@@ -30,7 +30,7 @@ modal_order.addEventListener("click", (e) => {
   if (e.target.offsetParent == null) {
     body.classList.remove("overfloy");
     modal_order.classList.remove("active");
-    main.classList.remove("active");
+    overlay.classList.remove("active");
   }
 });
 modalClose.addEventListener("click", () => {
@@ -60,7 +60,7 @@ locationItems.forEach(function (item) {
 phone.addEventListener("click", () => {
   modal_order.classList.add("active");
   body.classList.add("overfloy");
-  main.classList.add("active");
+  overlay.classList.add("active");
 });
 window.addEventListener("scroll", function (e) {
   if (window.scrollY > 100) {
